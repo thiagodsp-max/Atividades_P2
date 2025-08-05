@@ -23,7 +23,12 @@ public class Main {
 		prod.estocar(more);
 		prod.imprimir();
 		System.out.printf("Total: R$%.2f",prod.lucro());
-		
+		//
+		System.out.println("O estoque teve de remover:");
+		int less=read.nextInt();
+		prod.esvaziar(less);
+		prod.imprimir();
+		System.out.printf("Total: R$%.2f",prod.lucro());
 		read.close();
 	}
 
