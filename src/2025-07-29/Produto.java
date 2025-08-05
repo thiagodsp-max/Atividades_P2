@@ -11,13 +11,17 @@ public class Produto {
 		this.valor=valor;
 		this.stock=stock;
 	}
-	//Outros Métodos
+	//Métodos Necessários
 	public void estocar(int add) {
 		this.stock=this.stock + add;
+	}
+	public void esvaziar(int add) {
+		this.stock=this.stock - add;
 	}
 	public double lucro() {
 		return this.stock*this.valor;
 	}
+	//Outros Métodos
 	public void imprimir() {
 		System.out.println("Nome: "+this.nome);
 		System.out.println("Preço: R$"+this.valor);
