@@ -18,7 +18,7 @@ public class Banco {
 		System.out.print("Limite de Saque:");
 		double limit=ler.nextDouble();
 		//Ativar o método de sacar dinheiro
-		Bancario conta =new Bancario(id,name,saldo,limit);
+		Conta conta =new Conta(id,name,saldo,limit);
 		System.out.print("Insira o valor do saque:");
 		double amount=ler.nextDouble();
 		conta.sacar(amount);
