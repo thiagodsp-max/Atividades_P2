@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Banco {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		Scanner ler=new Scanner(System.in);
 		
 		System.out.println("Insira os dados da conta:\n");
@@ -18,9 +18,11 @@ public class Banco {
 		System.out.print("Limite de Saque:");
 		double limit=ler.nextDouble();
 		//Ativar o método de sacar dinheiro
-		;
+		Bancario conta =new Bancario(id,name,saldo,limit);
+		System.out.print("Insira o valor do saque:");
+		double amount=ler.nextDouble();
+		conta.sacar(amount);
 		
 		ler.close();
 	}
-
 }
